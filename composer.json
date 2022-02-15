@@ -1,0 +1,21 @@
+{
+    "name": "aaw0/adnec-press-releases",
+    "description": "Press Releases package creates a model, database table and laravel nova resource ready for you.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AliAwwadADNEC",
+            "email": "ali.awwad@adnec.ae"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Aaw0\\AdnecPressReleases\\": "src/"
+        }
+    }
+}
