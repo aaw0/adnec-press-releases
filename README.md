@@ -4,9 +4,11 @@ Press Releases package creates a model, database table and laravel nova resource
 
 
 Add the following line to `config/app.php`
-`
-/*Other classes*/
+```php
 'providers' => [
-`
-`\Aaw0\AdnecPressReleases\AdnecPressReleasesServiceProvider::class`
-`];`
+  
+  /*Other classes*/
+  
+  \Aaw0\AdnecPressReleases\AdnecPressReleasesServiceProvider::class;
+];
+```
