@@ -53,7 +53,7 @@ class AdnecPressRelease extends Resource
             ->conversionOnPreview('medium')
             ->conversionOnDetailView('thumb')
             ->conversionOnIndexView('thumb')->enableExistingMedia(),
-            Images::make('Main Image', 'main_image')->hideFromIndex()
+            Images::make('Wide Image', 'wide_image')->hideFromIndex()
             ->conversionOnPreview('medium')
             ->conversionOnDetailView('thumb')
             ->conversionOnIndexView('thumb')->enableExistingMedia(),
