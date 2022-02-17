@@ -11,11 +11,18 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        
+        "laravel/nova": "~3.0",
+        "ebess/advanced-nova-media-library": "^3.6"
     },
     "autoload": {
         "psr-4": {
             "Aaw0\\AdnecPressReleases\\": "src/"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ]
 }
