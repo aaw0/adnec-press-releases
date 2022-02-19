@@ -36,6 +36,11 @@ class AdnecPressRelease extends Model implements HasMedia
         return $query->where('is_published', false);
     }
 
+    public function scopeHasLocalizedTitle($query,$locale)
+    {
+        return $query->where('title_'.$locale, '!=',null);
+    }
+
     public function isPublished()
     {
         return $this->is_published;
