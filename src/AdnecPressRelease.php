@@ -58,9 +58,9 @@ class AdnecPressRelease extends Resource
             ->conversionOnDetailView('thumb')
             ->conversionOnIndexView('thumb')->enableExistingMedia(),
             Boolean::make('Is Published')->sortable()->required(),
-            Text::make('Title Ar')->sortable()->rules('required', 'max:255')->hideFromIndex(),
+            Text::make('Title Ar')->sortable()->rules('required_with:slug_ar', 'max:255')->hideFromIndex(),
             Slug::make('Slug Ar')->from('title_ar')->sortable()
-            ->rules('required', 'max:255')
+            ->rules('required_with:title_ar', 'max:255')
             ->creationRules('unique:press_releases,slug_ar')
             ->updateRules('unique:press_releases,slug_ar,{{resourceId}}')->hideFromIndex(),
             Text::make('Title En')->sortable()->rules('required', 'max:255'),
@@ -82,7 +82,8 @@ class AdnecPressRelease extends Resource
 
             Trix::make('Content Ar')->nullable(),
             Trix::make('Content En')->nullable(),
-
+            DateTime::make('Created At')->hideWhenCreating()->hideFromIndex(),
+            DateTime::make('Updated At')->hideWhenCreating(),
 
         ];
     }
