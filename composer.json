@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "laravel/nova": "*",
-        "ebess/advanced-nova-media-library": "^3.6"
+        "ebess/advanced-nova-media-library": "*"
     },
     "autoload": {
         "psr-4": {
